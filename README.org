@@ -1,1 +1,18 @@
 * dot-files
+Collections for dot files
+
+** Get the repo
+#+begin_src shell
+  git clone git@github.com:hsunchiu/dot-files.git
+#+end_src
+
+** ZSH
+#+begin_src shell
+  ln -s ~/.dot-files/zsh/zshrc ~/.zshrc
+  . ~/.zshrc
+#+end_src
+
+** Emacs
+#+begin_src shell
+  ln -s ~/.dot-files/emacs ~/.emacs.d/
+#+end_src

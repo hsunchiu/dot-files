@@ -1,0 +1,31 @@
+## the Cross compile toolchain for target arm
+export PATH="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin:$PATH"
+export PATH="/Applications/ArmGNUToolchain/13.2.Rel1/aarch64-none-elf/bin:$PATH"
+export PATH="/opt/dnw/bin:$PATH"
+
+## emacs starter
+alias emacs="emacs -nw $@"
+
+### I try to use llvm
+# alias gcc='gcc-13'
+# alias cc='gcc-13'
+# alias g++='g++-13'
+# alias c++='c++-13'
+
+# export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+# export LDFLAGS="-L/opt/homebrew/opt/binutils/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/binutils/include"
+## for compile the risvc64-tools
+# export  LIBRARY_PATH=/opt/homebrew/lib
+
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
