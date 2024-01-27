@@ -21,16 +21,7 @@
 
 ;; https://book.emacs-china.org/#org1ebaa5d
 ;; easy tempo
-(require 'org-tempo)  
-;; close `<' auto completion
-(setq electric-pair-inhibit-predicate
-      `(lambda (c)
-	 (if (char-equal c ?\<) t (,electric-pair-inhibit-predicate c))))
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (setq-local electric-pair-inhibit-predicate
-			`(lambda (c)
-			   (if (char-equal c ?\<) t (,electric-pair-inhibit-predicate c))))))
+(require 'org-tempo)
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (when (file-exists-p custom-file)
