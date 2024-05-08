@@ -59,6 +59,12 @@
 ;; easy tempo
 (require 'org-tempo)
 
+(use-package evil
+  :ensure t
+  :init
+  (evil-mode 1))
+
+
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (when (file-exists-p custom-file)
   (load custom-file))
