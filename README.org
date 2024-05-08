@@ -14,5 +14,5 @@ Collections for dot files
 
 ** Emacs
 #+begin_src shell
-  ln -s ~/.dot-files/emacs ~/.emacs.d/
+  ln -sf ~/.dot-files/emacs ~/.emacs.d/
 #+end_src
