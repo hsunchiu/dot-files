@@ -34,6 +34,7 @@
 ;; auto install treesit libs
 ;; `treesit-auto-install-all`
 (use-package treesit-auto
+  :ensure t
   :config
   (global-treesit-auto-mode))
 
@@ -61,6 +62,11 @@
 
 (use-package evil
   :ensure t
+  :config
+  (define-key evil-normal-state-map (kbd "C-p") #'evil-previous-line)
+  (define-key evil-normal-state-map (kbd "C-n") #'evil-next-line)
+  (define-key evil-normal-state-map (kbd "C-z") #'suspend-emacs)
+  (define-key evil-insert-state-map (kbd "C-z") #'suspend-emacs)
   :init
   (evil-mode 1))
 
