@@ -10,3 +10,11 @@ fancy-ctrl-z () {
 
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
+
+
+# Clion CLI in terminal
+clion(){
+	open -na "CLion.app" --args "$@"
+}
+
+
