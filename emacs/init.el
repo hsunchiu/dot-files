@@ -10,6 +10,10 @@
 ;; (add-to-list 'package-archives '("melpa" . "xxxx"))
 (package-initialize)
 
+;; Some ui config
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
 ;; Settings for company, auto-complete only for coding.
 (use-package company
   :ensure t
