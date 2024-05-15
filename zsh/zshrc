@@ -1,3 +1,4 @@
+# https://superuser.com/questions/378018/how-can-i-do-ctrl-z-and-bg-in-one-keypress-to-make-process-continue-in-backgroun
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
     BUFFER="fg"
@@ -11,6 +12,19 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+# https://schulz.dk/2022/01/26/using-ctrl-z-to-toggle-process-in-fg-bg/
+# https://serverfault.com/questions/283678/whats-the-short-cut-for-fg-in-linux 
+#if [[ "$(ps | grep `echo $$` | grep -v grep | awk '{ print $4 }')" == "bash" ]]; then
+	# For shell
+#	stty susp undef
+#	bind '"\C-z":"fg\015"'
+#fi
+
+# use ctrl-z to toggle in and out of bg
+#if [[ $- == *i* ]]; then 
+#  stty susp undef
+#  bind '"\C-z":" fg\015"'
+#fi
 
 # Clion CLI in terminal
 clion(){
