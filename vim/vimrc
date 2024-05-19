@@ -1,0 +1,2 @@
+" the recommended 72 columns to you commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
